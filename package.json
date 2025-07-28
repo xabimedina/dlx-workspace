@@ -7,13 +7,13 @@
     "apps/*"
   ],
   "scripts": {
-    "build": "yarn workspaces foreach run build",
+    "build": "yarn workspaces foreach --all run build",
     "dev": "yarn workspace dlx-web dev",
     "dev:components": "yarn workspace @xabimedina/dlx-components dev",
     "build:components": "yarn workspace @xabimedina/dlx-components build",
-    "lint": "yarn workspaces foreach run lint",
-    "clean": "yarn workspaces foreach run clean || true && rm -rf node_modules && rm -rf .yarn/cache",
-    "type-check": "yarn workspaces foreach run type-check || true"
+    "lint": "yarn workspaces foreach --all run lint",
+    "clean": "yarn workspaces foreach --all run clean || true && rm -rf node_modules && rm -rf .yarn/cache",
+    "type-check": "yarn workspaces foreach --all run type-check || true"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
